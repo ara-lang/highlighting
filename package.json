@@ -1,0 +1,25 @@
+{
+  "name": "ara",
+  "displayName": "Ara Highlighting",
+  "description": "Ara Programming Language Highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ara",
+      "aliases": ["Ara", "ara"],
+      "extensions": [".ara"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ara",
+      "scopeName": "source.ara",
+      "path": "./syntaxes/ara.json"
+    }]
+  }
+}
