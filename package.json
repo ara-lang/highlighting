@@ -15,10 +15,17 @@
         "url": "https://github.com/ara-lang/highlighting"
     },
     "license": "(Apache-2.0 OR MIT)",
-    "author": {
-        "name": "Nicolas Hedger",
-        "email": "nicolas@hedger.ch"
-    },
+    "contributors": [
+        {
+            "name": "Nicolas Hedger",
+            "email": "nicolas@hedger.ch",
+            "url": "https://github.com/nhedger"
+        },
+        {
+            "name": "Saif Eddin Gmati",
+            "url": "https://github.com/azjezz"
+        }
+    ],
     "publisher": "ara",
     "main": "./out/extension/node/extension.js",
     "browser": "./out/extension/web/extension.js",
