@@ -8,33 +8,28 @@ Ara Programming Language Syntax Highlighting for Visual Studio Code 🖌
 
 ### What's in the folder
 
--   `syntaxes/ara.json` - this is the Text mate grammar file that is used for
-    tokenization.
--   `language-configuration.json` - this is the language configuration, defining
-    the tokens that are used for comments and brackets.
+* `syntaxes/ara.json` - this is the Text mate grammar file that is used for tokenization.
+* `language-configuration.json` - this is the language configuration, defining the tokens that are used for comments and brackets.
 
 ### Get up and running straight away
 
--   Press `F5` to open a new window with the extension loaded.
--   Create a new file with a file name suffix `.ara`.
--   Verify that syntax highlighting works and that the language configuration
-    settings are working.
+* Press `F5` to open a new window with the extension loaded.
+* Create a new file with a file name suffix `.ara`.
+* Verify that syntax highlighting works and that the language configuration settings are working.
 
 ### Make changes
 
--   You can relaunch the extension from the debug toolbar after making changes
-    to the files listed above.
--   You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with
-    your extension to load your changes.
+* You can relaunch the extension from the debug toolbar after making changes to the files listed above.
+* You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
 
 ## License
 
 Licensed under either of
 
--   Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
-    http://www.apache.org/licenses/LICENSE-2.0)
--   MIT license ([LICENSE-MIT](LICENSE-MIT) or
-    http://opensource.org/licenses/MIT)
+ * Apache License, Version 2.0
+   ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license
+   ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.
 
@@ -46,6 +41,5 @@ dual licensed as above, without any additional terms or conditions.
 
 ## Credits
 
--   [Nicolas Hedger](https://github.com/nhedger)
--   [Saif Eddin Gmati](https://github.com/azjezz)
--   [All contributors](https://github.com/ara-lang/highlighting/graphs/contributors)
+* [Saif Eddin Gmati](https://github.com/azjezz)
+* [All contributors](https://github.com/ara-lang/highlighting/graphs/contributors)
