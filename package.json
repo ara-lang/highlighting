@@ -101,7 +101,7 @@
     "galleryBanner": {},
     "preview": true,
     "vsce": {
-        "baseImagesUrl": "https://github.com/nhedger/vscode-extension-template",
+        "baseImagesUrl": "https://github.com/ara-lang/highlighting",
         "dependencies": false
     }
 }
