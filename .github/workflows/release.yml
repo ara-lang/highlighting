@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-latest
+    steps:
+      - id: release
+        name: Run release-please
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: 'ara.vscode'
+          prerelease: true
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3
+        with:
+          registry-url: 'https://registry.npmjs.org'
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: latest
+          run_install: true
+      - name: Build extension
+        run: pnpm run build --env production
+      - name: Package extension
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm run package
+      # - name: Publish to Visual Studio Marketplace
+      #   if: ${{ steps.release.outputs.release_created }}
+      #   uses: HaaLeo/publish-vscode-extension@v1
+      #   with:
+      #     pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+      #     registryUrl: https://marketplace.visualstudio.com
