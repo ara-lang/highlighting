@@ -14,7 +14,7 @@
         "type": "git",
         "url": "https://github.com/ara-lang/highlighting"
     },
-    "license": "MIT",
+    "license": "(Apache-2.0 OR MIT)",
     "author": {
         "name": "Nicolas Hedger",
         "email": "nicolas@hedger.ch"
