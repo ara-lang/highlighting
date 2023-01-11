@@ -107,6 +107,10 @@
     },
     "galleryBanner": {},
     "preview": true,
+    "extensionKind": [
+        "ui",
+        "workspace"
+    ],
     "vsce": {
         "baseImagesUrl": "https://github.com/ara-lang/highlighting",
         "dependencies": false
