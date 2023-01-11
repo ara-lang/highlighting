@@ -60,9 +60,6 @@
             }
         ]
     },
-    "activationEvents": [
-        "onCommand:vscode-extension-template.helloWorld"
-    ],
     "devDependencies": {
         "@hedger/prettier-config": "^1.2.0",
         "@semantic-release/git": "^10.0.1",
