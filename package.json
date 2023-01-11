@@ -1,6 +1,6 @@
 {
     "name": "ara.vscode",
-    "displayName": "ARA",
+    "displayName": "Ara Highlighting",
     "version": "1.4.0",
     "description": "Highlighting for the ARA language.",
     "categories": [
