@@ -15,7 +15,7 @@ jobs:
         uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
-          package-name: 'ara.highlighting'
+          package-name: 'ara-highlighting'
           prerelease: true
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
