@@ -68,6 +68,9 @@
             }
         ]
     },
+    "activationEvents": [
+        "onLanguage:ara"
+    ],
     "devDependencies": {
         "@hedger/prettier-config": "^1.2.0",
         "@semantic-release/git": "^10.0.1",
