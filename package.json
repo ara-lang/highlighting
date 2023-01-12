@@ -1,8 +1,8 @@
 {
-    "name": "ara.vscode",
+    "name": "ara.highlighting",
     "displayName": "Ara Highlighting",
     "version": "1.4.0",
-    "description": "Highlighting for the ARA language.",
+    "description": "Highlighting for the Ara language.",
     "categories": [
         "Programming Languages"
     ],
