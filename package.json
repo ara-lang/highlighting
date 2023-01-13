@@ -38,7 +38,7 @@
         "lint": "eslint .",
         "package": "vsce package",
         "prepare": "lefthook install",
-        "test": "npm run test:web && npm run test:node",
+        "test": "pnpm run test:web && npm run test:node",
         "test:node": "node ./out/test-script.js --env node",
         "test:web": "node ./out/test-script.js --env web",
         "watch": "webpack watch",
