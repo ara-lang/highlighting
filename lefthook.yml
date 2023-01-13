@@ -8,4 +8,6 @@ pre-commit:
       glob: '*.{js,jsx}'
       run: pnpm exec eslint {staged_files}
     format:
-      run: pnpm exec prettier --ignore-unknown --write {staged_files}
+      run:
+        pnpm exec prettier --ignore-unknown --write {staged_files} && git add
+        {staged_files}

@@ -21,7 +21,7 @@ const cli = new Command()
         new Option(
             '-v, --version <version>',
             'Version of VS Code to run the tests with.'
-        ).default('latest')
+        ).default('stable')
     );
 
 cli.parse();
@@ -43,11 +43,14 @@ async function runTests() {
                   extensionDevelopmentPath,
                   extensionTestsPath,
                   launchArgs: ['--disable-extensions'],
+                  version: options.version,
               })
             : runTestsInBrowser({
                   extensionDevelopmentPath,
                   extensionTestsPath,
                   browserType: options.browser,
+                  quality: options.version,
+                  printServerLog: true,
               }));
     } catch (err) {
         console.error(err);

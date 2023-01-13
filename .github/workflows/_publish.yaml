@@ -1,0 +1,30 @@
+name: Publish
+
+on:
+    workflow_call:
+        inputs:
+            tag_name:
+                required: true
+                type: string
+
+jobs:
+    github-release:
+        name: Publish to GitHub Releases
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: "Restore extension's cached package"
+              uses: actions/cache/restore@v3
+              with:
+                  path: '*.vsix'
+                  key: 'package-${{ github.sha }}'
+                  enableCrossOsArchive: true
+            - name: Upload to GitHub Releases
+              uses: softprops/action-gh-release@v1
+              with:
+                  tag_name: ${{ inputs.tag_name }}
+                  files: |
+                      *.vsix
+                      LICENSE-APACHE
+                      LICENSE-MIT

@@ -1,0 +1,28 @@
+name: Package
+
+on:
+    workflow_call:
+
+jobs:
+    package:
+        name: Package Extension
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Set up
+              uses: ./.github/actions/setup
+            - name: "Restore extension's cached build assets"
+              uses: actions/cache/restore@v3
+              with:
+                  path: ./out
+                  key: 'build-${{ github.sha }}'
+                  enableCrossOsArchive: true
+            - name: Package extension
+              run: pnpm run package
+            - name: Cache packaged extension
+              uses: actions/cache/save@v3
+              with:
+                  path: '*.vsix'
+                  key: 'package-${{ github.sha }}'
+                  enableCrossOsArchive: true

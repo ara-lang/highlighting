@@ -2,13 +2,20 @@ name: Release
 
 on:
   push:
-    branches:
-      - 'main'
+    branches: ['main']
 
 jobs:
-  release-please:
-    name: Release Please
+  integrate:
+    name: Integrate
+    uses: ./.github/workflows/integrate.yaml
+
+  release:
+    name: Release
+    needs: ['integrate']
     runs-on: ubuntu-latest
+    outputs:
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
       - id: release
         name: Run release-please
@@ -17,27 +24,18 @@ jobs:
           release-type: node
           package-name: 'ara-highlighting'
           prerelease: true
-          bump-minor-pre-major: true
-          bump-patch-for-minor-pre-major: true
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up NodeJS
-        uses: actions/setup-node@v3
-        with:
-          registry-url: 'https://registry.npmjs.org'
-      - name: Set up PNPM
-        uses: pnpm/action-setup@v2.2.4
-        with:
-          version: latest
-          run_install: true
-      - name: Build extension
-        run: pnpm run build --env production
-      - name: Package extension
-        if: ${{ steps.release.outputs.release_created }}
-        run: pnpm run package
-      # - name: Publish to Visual Studio Marketplace
-      #   if: ${{ steps.release.outputs.release_created }}
-      #   uses: HaaLeo/publish-vscode-extension@v1
-      #   with:
-      #     pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-      #     registryUrl: https://marketplace.visualstudio.com
+          pull-request-header: 'Upcoming version of Ara Highlighting'
+          draft-pull-request: true
+
+  package:
+    name: Package
+    needs: ['release']
+    uses: ./.github/workflows/_package.yaml
+    if: ${{ needs.release.outputs.release_created }}
+
+  publish:
+    name: Publish
+    needs: ['release', 'package']
+    uses: ./.github/workflows/_publish.yaml
+    with:
+      tag_name: ${{ needs.release.outputs.tag_name }}
