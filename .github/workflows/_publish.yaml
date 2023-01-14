@@ -46,6 +46,6 @@ jobs:
             - name: Publish to Visual Studio Marketplace
               uses: HaaLeo/publish-vscode-extension@v1
               with:
-                  path: ${{ secrets.CODE_PUBLISHER_SECRET }}
+                  pat: ${{ secrets.CODE_PUBLISHER_SECRET }}
                   registryUrl: https://marketplace.visualstudio.com
                   extensionFile: ara-highlighting-${{ inputs.version }}.vsix
