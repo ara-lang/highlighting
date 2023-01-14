@@ -41,5 +41,6 @@ dual licensed as above, without any additional terms or conditions.
 
 ## Credits
 
+* [Nicolas Hedger](https://github.com/nhedger)
 * [Saif Eddin Gmati](https://github.com/azjezz)
 * [All contributors](https://github.com/ara-lang/highlighting/graphs/contributors)
