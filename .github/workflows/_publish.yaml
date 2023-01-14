@@ -6,6 +6,9 @@ on:
             tag_name:
                 required: true
                 type: string
+            version:
+                required: true
+                type: string
 
 jobs:
     github-release:
@@ -28,3 +31,21 @@ jobs:
                       *.vsix
                       LICENSE-APACHE
                       LICENSE-MIT
+    vs-marketplace:
+        name: Publish to Visual Studio Marketplace
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: "Restore extension's cached package"
+              uses: actions/cache/restore@v3
+              with:
+                  path: '*.vsix'
+                  key: 'package-${{ github.sha }}'
+                  enableCrossOsArchive: true
+            - name: Publish to Visual Studio Marketplace
+              uses: HaaLeo/publish-vscode-extension@v1
+              with:
+                  path: ${{ secrets.CODE_PUBLISHER_SECRET }}
+                  registryUrl: https://marketplace.visualstudio.com
+                  extensionFile: ara-highlighting-${{ inputs.version }}.vsix

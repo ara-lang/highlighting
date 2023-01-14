@@ -16,6 +16,8 @@ jobs:
     outputs:
       tag_name: ${{ steps.release.outputs.tag_name }}
       release_created: ${{ steps.release.outputs.release_created }}
+      version: |
+        '${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}'
     steps:
       - id: release
         name: Run release-please
@@ -39,3 +41,4 @@ jobs:
     uses: ./.github/workflows/_publish.yaml
     with:
       tag_name: ${{ needs.release.outputs.tag_name }}
+      version: '${{ needs.release.outputs.version }}'
