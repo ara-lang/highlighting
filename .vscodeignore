@@ -1,4 +1,10 @@
-.vscode/**
-.vscode-test/**
-.gitignore
-vsc-extension-quickstart.md
+*
+*/**
+**/.DS_Store
+!out/extension/node/extension.js
+!out/extension/web/extension.js
+!package.json
+!package.nls.json
+!README.md
+!LICENSE-APACHE
+!LICENSE-MIT

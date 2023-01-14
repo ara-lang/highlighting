@@ -1,0 +1,10 @@
+/.vscode-test*
+/node_modules/
+/out
+/CHANGELOG.md
+/CODE_OF_CONDUCT.md
+/LICENSE.md
+/LICENSE-APACHE
+/LICENSE-MIT
+/README.md
+/pnpm-lock.yaml

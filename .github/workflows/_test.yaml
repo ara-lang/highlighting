@@ -1,0 +1,37 @@
+name: Test
+
+on:
+    workflow_call:
+
+jobs:
+    test:
+        name: Test (${{ matrix.env }}, ${{ matrix.version }}, ${{ matrix.os }})
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                env: ['web', 'node']
+                version: ['stable']
+                os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
+            fail-fast: false
+        timeout-minutes: 30
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Set up
+              uses: ./.github/actions/setup
+            - name: Install playwright browsers
+              run: pnpm dlx playwright install chromium --with-deps
+            - name: "Restore extension's cached build assets"
+              uses: actions/cache/restore@v3
+              with:
+                  path: ./out
+                  key: 'build-${{ github.sha }}'
+                  enableCrossOsArchive: true
+            - name: Run tests (Linux)
+              if: runner.os == 'Linux'
+              run: |
+                  xvfb-run -a node ./out/test-script.js --env "${{ matrix.env }}" --version "${{ matrix.version }}"
+            - name: Run tests
+              run: |
+                  node ./out/test-script.js --env "${{ matrix.env }}" --version "${{ matrix.version }}"
+              if: runner.os != 'Linux'
