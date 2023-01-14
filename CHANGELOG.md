@@ -5,6 +5,18 @@ All notable changes to the "ara" extension will be documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [0.1.1](https://github.com/ara-lang/highlighting/compare/v0.1.0...v0.1.1) (2023-01-14)
+
+
+### Features
+
+* add support for VS Code `&gt;=1.64.0` ([#11](https://github.com/ara-lang/highlighting/issues/11)) ([4bb0945](https://github.com/ara-lang/highlighting/commit/4bb09458af559c27ae332eb38075226a9303f421))
+
+
+### Continuous Integration
+
+* **release:** bump patch for minor pre major ([253c801](https://github.com/ara-lang/highlighting/commit/253c801b51dbd3e4a5bd0d20b6c15a2555ea591f))
+
 ## [0.1.0](https://github.com/ara-lang/highlighting/compare/v0.1.0...v0.1.0) (2023-01-14)
 
 
