@@ -3,6 +3,11 @@ import { Command, Option } from 'commander';
 import { runTests as runTestsInBrowser } from '@vscode/test-web';
 import { runTests as runTestsInElectron } from '@vscode/test-electron';
 
+// https://github.com/microsoft/vscode-test-web/issues/43
+process.on('uncaughtException', (error) =>
+    console.log('something wrong ocurred', error)
+);
+
 const cli = new Command()
     .addOption(
         new Option('-e, --env <env>', 'Environment in which to run the tests.')
