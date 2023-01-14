@@ -29,6 +29,7 @@ jobs:
           prerelease: false
           pull-request-header: 'Upcoming version of Ara Highlighting'
           draft-pull-request: true
+          bump-patch-for-minor-pre-major: true
 
   package:
     name: Package
