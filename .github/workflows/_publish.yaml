@@ -9,9 +9,6 @@ on:
             version:
                 required: true
                 type: string
-            vs_marketplace_token:
-                required: true
-                type: string
 
 jobs:
     github-release:
@@ -49,6 +46,6 @@ jobs:
             - name: Publish to Visual Studio Marketplace
               uses: HaaLeo/publish-vscode-extension@v1
               with:
-                  pat: ${{ inputs.vs_marketplace_token }}
+                  pat: ${{ secrets.CODE_PUBLISHER_SECRET }}
                   registryUrl: https://marketplace.visualstudio.com
                   extensionFile: ara-highlighting-${{ inputs.version }}.vsix

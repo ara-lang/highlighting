@@ -39,7 +39,7 @@ jobs:
     name: Publish
     needs: ['release', 'package']
     uses: ./.github/workflows/_publish.yaml
+    secrets: inherit
     with:
       tag_name: ${{ needs.release.outputs.tag_name }}
       version: ${{ needs.release.outputs.version }}
-      vs_marketplace_token: ${{ secrets.CODE_PUBLISHER_SECRET }}
