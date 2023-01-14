@@ -7,7 +7,7 @@ specifiers:
   '@types/glob': ^7.2.0
   '@types/mocha': ^9.1.1
   '@types/node': ^18.11.18
-  '@types/vscode': ^1.73.0
+  '@types/vscode': ^1.64.0
   '@types/webpack': ^5.28.0
   '@types/webpack-env': ^1.18.0
   '@types/webpack-node-externals': ^2.5.3
@@ -42,7 +42,7 @@ devDependencies:
   '@types/glob': 7.2.0
   '@types/mocha': 9.1.1
   '@types/node': 18.11.18
-  '@types/vscode': 1.74.0
+  '@types/vscode': 1.64.0
   '@types/webpack': 5.28.0_webpack-cli@4.10.0
   '@types/webpack-env': 1.18.0
   '@types/webpack-node-externals': 2.5.3_webpack-cli@4.10.0
@@ -558,8 +558,8 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
-  /@types/vscode/1.74.0:
-    resolution: {integrity: sha512-LyeCIU3jb9d38w0MXFwta9r0Jx23ugujkAxdwLTNCyspdZTKUc43t7ppPbCiPoQ/Ivd/pnDFZrb4hWd45wrsgA==}
+  /@types/vscode/1.64.0:
+    resolution: {integrity: sha512-bSlAWz5WtcSL3cO9tAT/KpEH9rv5OBnm93OIIFwdCshaAiqr2bp1AUyEwW9MWeCvZBHEXc3V0fTYVdVyzDNwHA==}
     dev: true
 
   /@types/webpack-env/1.18.0:
