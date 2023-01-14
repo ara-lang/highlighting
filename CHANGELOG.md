@@ -5,6 +5,13 @@ All notable changes to the "ara" extension will be documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [0.1.1](https://github.com/ara-lang/highlighting/compare/v0.1.0...v0.1.1) (2023-01-14)
+
+
+### Bug Fixes
+
+* bundle missing syntax and language configuration ([a1a0a73](https://github.com/ara-lang/highlighting/commit/a1a0a731055291eed819e7769bf0dccc1a664bdb))
+
 ## 0.1.0 (2023-01-14)
 
 
