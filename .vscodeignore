@@ -3,8 +3,9 @@
 **/.DS_Store
 !out/extension/node/extension.js
 !out/extension/web/extension.js
-!package.json
-!package.nls.json
-!README.md
+!syntaxes/**/*.json
+!language-configuration.json
 !LICENSE-APACHE
 !LICENSE-MIT
+!package.json
+!README.md
