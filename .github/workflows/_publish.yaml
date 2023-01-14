@@ -48,4 +48,4 @@ jobs:
               with:
                   pat: ${{ secrets.CODE_PUBLISHER_SECRET }}
                   registryUrl: https://marketplace.visualstudio.com
-                  extensionFile: ara-highlighting-${{ inputs.version }}.vsix
+                  extensionFile: 'ara-highlighting-${{ inputs.version }}.vsix'
