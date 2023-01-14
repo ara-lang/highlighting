@@ -109,6 +109,7 @@
     "engines": {
         "vscode": "^1.64.0"
     },
+    "icon": "icon.png",
     "galleryBanner": {},
     "preview": true,
     "extensionKind": [
