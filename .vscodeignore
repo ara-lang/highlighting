@@ -4,6 +4,7 @@
 !out/extension/node/extension.js
 !out/extension/web/extension.js
 !syntaxes/**/*.json
+!icon.png
 !language-configuration.json
 !LICENSE-APACHE
 !LICENSE-MIT
