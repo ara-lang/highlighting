@@ -10,7 +10,7 @@ to structure this file.
 
 ### Features
 
-* add support for VS Code `&gt;=1.64.0` ([#11](https://github.com/ara-lang/highlighting/issues/11)) ([4bb0945](https://github.com/ara-lang/highlighting/commit/4bb09458af559c27ae332eb38075226a9303f421))
+* add support for VS Code `>=1.64.0` ([#11](https://github.com/ara-lang/highlighting/issues/11)) ([4bb0945](https://github.com/ara-lang/highlighting/commit/4bb09458af559c27ae332eb38075226a9303f421))
 
 
 ### Continuous Integration
